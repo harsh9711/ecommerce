@@ -83,7 +83,7 @@ figure{
     }
 }
 .img-style{
-    width:100%:
+    width:100%;
     height:auto;
 }
 @media(max-width:${({theme})=>theme.media.mobile}){
