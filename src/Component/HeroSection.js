@@ -11,10 +11,10 @@ const {name}=myData;
                 <p className="intro-data">Welcome To</p>
                 <h1>{name}</h1>
                 <p>
-                 lorem ipsum dolor sit amet, consectetur adip
-                 lorem ipsum dolor sit amet, consectetur adip
-                 lorem ipsum dolor sit amet, consectetur adip
-                 lorem ipsum dolor sit amet, consectetur adip
+                 HELLO, WELCOME TO MY WEBSITE,<br/>
+                 KAISE HO AAP?????<br/>
+                 ARE YOU READY FOR FUN<br/>
+                 JUST ZOOOOOP THROUGH THE WHOLE WEBSITE
                 </p>
                 <NavLink>
                     <Button>shop now</Button>

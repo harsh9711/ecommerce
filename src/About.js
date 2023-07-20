@@ -3,7 +3,7 @@ import {useProductContext} from "./context/productcontext";
 const About=()=>{
     const {myName}=useProductContext();
     const data={
-        name:"thapa Ecommerece",
+        name:"HS Ecommerece",
     };
 return(
   <>

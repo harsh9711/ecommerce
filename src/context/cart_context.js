@@ -2,12 +2,15 @@ import { createContext, useContext,useReducer,useEffect } from "react";
 import reducer from "../reducer/cart_reducer";
 const CartContext=createContext();
 const getLocalCartData=()=>{
-    let localCartData=localStorage.getItem("thapaCart");     
-    if(localCartData===[]) {
-        return []; 
-    }else {
-        return JSON.parse(localCartData);
-    }
+let localCartData=localStorage.getItem("HSCart");     
+//     if(localCartData===[]) {
+//         return []; 
+//     }else {
+//         return JSON.parse(localCartData);
+//     }
+const parsedData=JSON.parse(localCartData);
+if(!Array.isArray(parsedData)) return [];
+return parsedData;
 };
 const initialState={
      cart:getLocalCartData(),

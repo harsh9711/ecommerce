@@ -5,7 +5,7 @@ import Service from "./Component/Service";
 import FeatureProduct from "./Component/FeatureProduct";
 const Home=()=>{
     const data={
-        name:"thapa store",
+        name:"HS store",
     }; 
     return(
     <>
