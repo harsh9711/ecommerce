@@ -5,8 +5,12 @@ import {FaCheck} from "react-icons/fa";
 import CartAmountToggle from "./CartAmountToggle";
 import { NavLink } from "react-router-dom";
 import {Button} from "/Users/harshsahcdeva/Desktop/l/ecommerce/src/styles/Button.js";
+import { useCartContext } from "../context/cart_context";
+import { logDOM } from "@testing-library/react";
+
 
 const AddtoCart=({product})=>{
+    const {addtoCart}=useCartContext();
     const {id,colors,stock}=product;
     const[color,setcolor]=useState(colors[2]);
     const[amount,setAmount]=useState(1);
@@ -21,7 +25,8 @@ const AddtoCart=({product})=>{
             <div className="colors">
                 <p>
                     Colors:
-                    {colors.map((curColor,index)=>{                  
+                    {colors.map((curColor,index)=>{ 
+                        console.log({curColor})                 
                     return(
                     <button 
                     key={index}
@@ -40,7 +45,7 @@ const AddtoCart=({product})=>{
                 setIncrease={setIncrease}
                 setDecrease={setDecrease}
             />
-            <NavLink to="/cart">
+            <NavLink to="/cart" onClick={()=>addtoCart(id,colors,amount,product)}>
                 <Button>Add To Cart</Button>
             </NavLink>
 

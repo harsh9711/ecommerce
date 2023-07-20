@@ -3,8 +3,15 @@ import styled from "styled-components";
 import { NavLink } from 'react-router-dom';
 import {FiShoppingCart} from "react-icons/fi";
 import {CgMenu,CgClose} from "react-icons/cg";
+import { useAuth0 } from "@auth0/auth0-react";
+import { Button } from '../styles/Button';
+import { useCartContext } from '../context/cart_context';
+
 const Nav=()=>{
     const[MenuIcon,setMenuIcon]=useState();
+    const { loginWithRedirect,logout,  isAuthenticated,user } = useAuth0();
+    const {total_item}=useCartContext();
+
     const Nav=styled.nav`
     .navbar-lists
     {
@@ -167,18 +174,25 @@ return(
                 <NavLink to="/contact" className="navbar-link ">
                 Contact
                 </NavLink>
-            </li>
+            </li> 
             <li>
                 <NavLink to="/about" className="navbar-link ">
                 About
                 </NavLink>
             </li>
+            {isAuthenticated &&  <p>{user.name}</p>}
+            {isAuthenticated?(
+                <Button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Log Out</Button>    
+               
+            ):( <li> <Button onClick={() => loginWithRedirect()}>Log In</Button></li> )
+            }     
             <li>
                 <NavLink to="/cart" className="navbar-link cart-trolley--link">
                 <FiShoppingCart className="cart-trolley"/>
-                <span className="cart-total--item">10</span>
+                <span className="cart-total--item">{total_item}</span>
                 </NavLink>
-            </li>          
+            </li>   
+              
         </ul>
         <div className="mobile-navbar-btn">
         <CgMenu
@@ -191,6 +205,7 @@ return(
           className="mobile-nav-icon close-outline"
           onClick={() => setMenuIcon(true)}
         />
+       
         </div>
     </div>
 </Nav>

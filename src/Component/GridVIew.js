@@ -2,7 +2,6 @@ import React from "react";
 import styled  from "styled-components";
 import Product from "./Product";
 const GridView=({products})=>{
-    console.log(products);
     return(
          <Wrapper className="section">
          <div className="container grid grid-three-column">
@@ -34,7 +33,7 @@ width:auto;
 display:flex;
 justify-content:center;
 align-items:center;
-position:absolute;
+position:relative;
 overflow:hidden;
 transition:all 0.5s linear ;
 &::after{

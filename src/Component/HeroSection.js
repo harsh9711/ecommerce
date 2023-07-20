@@ -36,6 +36,8 @@ const {name}=myData;
 };
 const Wrapper=styled.section`
 padding:12rem 0;
+import { NavLink } from "react-router-dom";
+
  img{
     min-width:50rem;
     height:50rem;

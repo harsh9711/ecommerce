@@ -10,9 +10,9 @@ const Products=()=>{
 return (
 <Wrapper>
 <div className="container grid grid-filter-column">
-    <div>
-        <FilterSection/>
-    </div>
+<div className="filter-section">
+          <FilterSection />
+        </div>
     <section className="product-view--sort">
        <div className="sort-filter">
         <Sort/>
@@ -25,10 +25,27 @@ return (
 </Wrapper>
 );
 };
+
 const Wrapper=styled.section`
+.filter-section {
+    flex: 0.2;
+  }
+
+  .product-view--sort {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sort-filter {
+    margin-bottom: 1rem;
+  }
+
 .grid-filter-column{
+    display: flex;
+    gap: 2rem;
     grid-temlplate-columns:0.2fr 1fr;
-}
+} 
 @media (max-width: ${({theme})=>theme.media.mobile})
 {
     .grid-filter-column{
