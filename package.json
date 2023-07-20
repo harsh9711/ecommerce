@@ -1,6 +1,6 @@
 {
   "name": "ecommerce",
-  "homepage": "https://harsh9711.githu.io/ecommerce",
+  "homepage": "https://harsh9711.github.io/ecommerce",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,8 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy" : "npm run build",
-"deploy" : "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "redux-devtools-extension": "^2.13.9"
   }
 }
