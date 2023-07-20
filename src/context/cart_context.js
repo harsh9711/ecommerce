@@ -40,7 +40,9 @@ const CartProvider=({children})=>{
 
 
     useEffect(()=>{
-        dispatch({type:"CART_TOTAL_ITEM"});
+        // dispatch({type:"CART_TOTAL_ITEM"});
+        // dispatch({type:"CART_TOTAL_PRICE"});
+        dispatch({type:"CART_TOTAL_PRICE_TOTAL"});
         localStorage.setItem("thapaCart",JSON.stringify(state.cart));
     },[state.cart]);
 
