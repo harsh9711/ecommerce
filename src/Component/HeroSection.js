@@ -14,7 +14,7 @@ const {name}=myData;
                  HELLO, WELCOME TO MY WEBSITE,<br/>
                  KAISE HO AAP?????<br/>
                  ARE YOU READY FOR FUN<br/>
-                 JUST ZOOOOOP THROUGH THE WHOLE WEBSITE
+                 JUST ZOOOOOP THROUGH MY WHOLE WEBSITE
                 </p>
                 <NavLink>
                     <Button>shop now</Button>
